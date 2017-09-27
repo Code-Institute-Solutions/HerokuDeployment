@@ -17,12 +17,22 @@
             {% else %}
             <td>{{ item.name }}</td>
             {% endif %}
+            
+            <td>
+                <form method="POST" action="toggle/{{ item.id }}">{% csrf_token %}<input type="submit" value="Toggle"></form>
+            </td>
+            
+            <td>
+                <form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form>
+            </td>
         </tr>
         {% empty %}
         <p>You have nothing to do.</p>
         {% endfor %}
 
     </table>
+    
+    <a href="add">Add an Item</a>
     
 </body>
 </html>
