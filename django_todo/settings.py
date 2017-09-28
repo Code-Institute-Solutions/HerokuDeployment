@@ -100,7 +100,7 @@ DATABASES = {
 
 
 # DATABASES = {'default': dj_database_url.parse('mysql://b486d0e44e4416:412e1bf5@eu-cdbr-west-01.cleardb.com/heroku_dbedb3a9b1ae58f') }
-
+DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL', 'sqlite://db.sqlite3')) }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
