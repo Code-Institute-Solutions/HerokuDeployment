@@ -25,7 +25,7 @@ SECRET_KEY = 'p_njzm=6@d@2f8#!1nfz@j2o1x($l4c&%4)6%h#flv-&yzl(xx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-todo-richardadalton.c9users.io']
+ALLOWED_HOSTS = ['django-test-framework-richardadalton.c9users.io']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todo'
+    'todo',
 ]
 
 MIDDLEWARE = [
