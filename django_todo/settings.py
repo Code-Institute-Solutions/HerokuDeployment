@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p_njzm=6@d@2f8#!1nfz@j2o1x($l4c&%4)6%h#flv-&yzl(xx'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'p_njzm=6@d@2f8#!1nfz@j2o1x($l4c&%4)6%h#flv-&yzl(xx')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-test-framework-richardadalton.c9users.io', 'com-devjoy-todo.herokuapp.com']
+ALLOWED_HOSTS = ['django-test-framework-richardadalton.c9users.io']
 
 host = os.environ.get('SITE_HOST')
 if host:
@@ -79,27 +79,6 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'c9',
-#         'USER': os.environ["C9_USER"],
-#         'PASSWORD': '',
-#         'HOST': os.environ["IP"],
-#         'PORT': '3306',
-#     }
-# }
-
-
-# DATABASES = {'default': dj_database_url.parse('mysql://b486d0e44e4416:412e1bf5@eu-cdbr-west-01.cleardb.com/heroku_dbedb3a9b1ae58f') }
 DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL', 'sqlite://db.sqlite3')) }
 
 # Password validation
