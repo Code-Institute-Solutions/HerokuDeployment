@@ -14,8 +14,7 @@ class TestItemModel(TestCase):
         item.save();
         self.assertEqual(item.name, "any name")
         self.assertTrue(item.done)
-
-
+        
     def test_item_as_string(self):
         item = Item(name="An Item", done=False)
         self.assertEqual("An Item", str(item))
