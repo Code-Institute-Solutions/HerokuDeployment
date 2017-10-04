@@ -26,7 +26,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'p_njzm=6@d@2f8#!1nfz@j2o1x($l4c&%4)6%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['todo-aaronstudent.c9users.io']
+ALLOWED_HOSTS = ['todo-aaronstudent.c9users.io',
+                 'simple-django-todo.herokuapp.com']
 
 host = os.environ.get('SITE_HOST')
 if host:
