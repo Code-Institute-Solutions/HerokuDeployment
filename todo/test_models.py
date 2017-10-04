@@ -17,4 +17,4 @@ class TestItemModel(TestCase):
         
     def test_item_as_string(self):
         item = Item(name="An Item", done=True)
-        self.assertEqual("An Item", str(item))
+        self.assertEqual("Not An Item", str(item))
