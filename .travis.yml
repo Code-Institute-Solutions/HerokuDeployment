@@ -1,0 +1,12 @@
+language: python
+
+python:
+    "3.6"
+
+install: pip install -r requirements.txt
+
+script: python manage.py test
+
+dev:
+    DEVELOPMENT=1
+    SECRET_KEY="y-04ctjl%i8p0bo$ipz=h2#ejllehrcac@z#wxtue2_+kfja#i"
